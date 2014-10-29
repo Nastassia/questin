@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   end
 
   root 'user#new'
-  post '/user' => 'user#create'
+  get '/logout' => 'user#logout'
+  post '/user/show' => 'user#index'
 #                 Prefix Verb   URI Pattern                                 Controller#Action
 # user_character_index GET    /user/:user_id/character(.:format)          character#index
 #                      POST   /user/:user_id/character(.:format)          character#create
