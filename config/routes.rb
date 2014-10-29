@@ -1,28 +1,31 @@
 Rails.application.routes.draw do
-  resources :user do
-    resources :character
-  end
+  resources :user
+  resources :character
+
 
   root 'user#new'
   get '/logout' => 'user#logout'
   post '/user/show' => 'user#index'
-#                 Prefix Verb   URI Pattern                                 Controller#Action
-# user_character_index GET    /user/:user_id/character(.:format)          character#index
-#                      POST   /user/:user_id/character(.:format)          character#create
-#   new_user_character GET    /user/:user_id/character/new(.:format)      character#new
-#  edit_user_character GET    /user/:user_id/character/:id/edit(.:format) character#edit
-#       user_character GET    /user/:user_id/character/:id(.:format)      character#show
-#                      PATCH  /user/:user_id/character/:id(.:format)      character#update
-#                      PUT    /user/:user_id/character/:id(.:format)      character#update
-#                      DELETE /user/:user_id/character/:id(.:format)      character#destroy
-#           user_index GET    /user(.:format)                             user#index
-#                      POST   /user(.:format)                             user#create
-#             new_user GET    /user/new(.:format)                         user#new
-#            edit_user GET    /user/:id/edit(.:format)                    user#edit
-#                 user GET    /user/:id(.:format)                         user#show
-#                      PATCH  /user/:id(.:format)                         user#update
-#                      PUT    /user/:id(.:format)                         user#update
-#                      DELETE /user/:id(.:format)                         user#destroy
+#          Prefix Verb   URI Pattern                   Controller#Action
+#      user_index GET    /user(.:format)               user#index
+#                 POST   /user(.:format)               user#create
+#        new_user GET    /user/new(.:format)           user#new
+#       edit_user GET    /user/:id/edit(.:format)      user#edit
+#            user GET    /user/:id(.:format)           user#show
+#                 PATCH  /user/:id(.:format)           user#update
+#                 PUT    /user/:id(.:format)           user#update
+#                 DELETE /user/:id(.:format)           user#destroy
+# character_index GET    /character(.:format)          character#index
+#                 POST   /character(.:format)          character#create
+#   new_character GET    /character/new(.:format)      character#new
+#  edit_character GET    /character/:id/edit(.:format) character#edit
+#       character GET    /character/:id(.:format)      character#show
+#                 PATCH  /character/:id(.:format)      character#update
+#                 PUT    /character/:id(.:format)      character#update
+#                 DELETE /character/:id(.:format)      character#destroy
+#            root GET    /                             user#new
+#          logout GET    /logout(.:format)             user#logout
+#       user_show POST   /user/show(.:format)          user#index
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

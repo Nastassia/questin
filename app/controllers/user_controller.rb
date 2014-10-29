@@ -29,7 +29,7 @@ class UserController < ApplicationController
   def show
     @user = User.find_by(id: session[:user_id])
     if @user
-      render :show
+      render :show, {locals: {user: @user, include: :character}}
     else
       render :new
     end

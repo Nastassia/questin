@@ -1,2 +1,28 @@
-<h1>WHOO HOO! SIGNED IN!</h1>
-<a href="/logout"><button>Log out</button></a>
+<html>
+  <head>
+    <title>Questin</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Go Questin</h1>
+      <a href="/logout"><button>Log out</button></a>
+      <hr />
+      <aside>
+
+      </aside>
+      <main>
+        <h3>Hello <%= user.username %>!</h3>
+        <% if user.characters == [] %>
+          <div id="createCharacter">
+            <h4>Choose your character:</h4>
+            <img src="/player1.png" id="player1" />
+            <img src="/player2.png" id="player2" />
+
+          </div>
+        <% end %>
+        <div id="gameDiv">
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
