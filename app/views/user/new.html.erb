@@ -8,11 +8,17 @@
     <h2>Welcome to The Questin</h2>
     <p>A new hero is born every day...</p>
     <header>
-    <form action '/user/new' method='post'>
+      <% if @error %>
+        <p>You must enter in a username and password.</p>
+      <% end %>
+    <form action="/user" method="POST">
       <label>Hero Name</label><br />
       <input type="text" name="username"><br />
       <label>Password</label><br />
-      <input type="password" name="password"><br />
+      <input type="password" name="password_digest"><br />
+      <label>Email</label><br />
+      <input type="email" name="email"><br />
+      <input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
       <button>Answer the call</button>
     </form>
   </div>
