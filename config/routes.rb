@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :character
   end
 
+  root 'user#new'
 #                 Prefix Verb   URI Pattern                                 Controller#Action
 # user_character_index GET    /user/:user_id/character(.:format)          character#index
 #                      POST   /user/:user_id/character(.:format)          character#create
