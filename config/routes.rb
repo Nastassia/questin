@@ -1,4 +1,25 @@
 Rails.application.routes.draw do
+  resources :user do
+    resources :character
+  end
+
+#                 Prefix Verb   URI Pattern                                 Controller#Action
+# user_character_index GET    /user/:user_id/character(.:format)          character#index
+#                      POST   /user/:user_id/character(.:format)          character#create
+#   new_user_character GET    /user/:user_id/character/new(.:format)      character#new
+#  edit_user_character GET    /user/:user_id/character/:id/edit(.:format) character#edit
+#       user_character GET    /user/:user_id/character/:id(.:format)      character#show
+#                      PATCH  /user/:user_id/character/:id(.:format)      character#update
+#                      PUT    /user/:user_id/character/:id(.:format)      character#update
+#                      DELETE /user/:user_id/character/:id(.:format)      character#destroy
+#           user_index GET    /user(.:format)                             user#index
+#                      POST   /user(.:format)                             user#create
+#             new_user GET    /user/new(.:format)                         user#new
+#            edit_user GET    /user/:id/edit(.:format)                    user#edit
+#                 user GET    /user/:id(.:format)                         user#show
+#                      PATCH  /user/:id(.:format)                         user#update
+#                      PUT    /user/:id(.:format)                         user#update
+#                      DELETE /user/:id(.:format)                         user#destroy
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
