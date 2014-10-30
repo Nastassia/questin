@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require main
+//= require phaser.min.js
+//= require game
 // require_tree .
