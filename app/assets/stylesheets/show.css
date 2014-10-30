@@ -41,6 +41,19 @@ input {
   border-radius:8px;
 }
 
+button {
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+form {
+  color: #FFE7B3;
+}
+
 canvas {
-  display:none;
+  z-index: -2000px;
+}
+
+p {
+  font-style:italic;
 }
