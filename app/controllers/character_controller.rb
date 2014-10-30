@@ -10,4 +10,8 @@ def index
     send_file Base64.decode64(@image_data), type: 'image/png', disposition: 'inline' ##THIS WORKS##
 end
 
+def create
+
+end
+
 end
