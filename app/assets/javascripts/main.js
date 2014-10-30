@@ -4,6 +4,8 @@ var player2;
 var userID;
 
 $(function(){
+  $('#gameDiv').hide();
+
   if (makeChar != []){
       makeChar = $('#createCharacter');
       player1 = $('#player1');
@@ -24,6 +26,8 @@ $(function(){
           console.log("it's a go.");
         });
 
+        $('#gameDiv').fadeIn();
+
       });
       player2.click(function(){
         makeChar.append("<p>You have chosen!</p>");
@@ -39,6 +43,9 @@ $(function(){
         }).done(function(){
           console.log("it's a go.");
         });
+
+        $('#gameDiv').fadeIn();
+
       });
 
   }

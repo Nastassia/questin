@@ -1,9 +1,25 @@
+// var player = $.get("/player2.png").done(function(e){console.log(e)});
+// var img = new Image();
+//
+// $(img).load(function(){
+//
+//   $('#container').append($(this));
+//
+// }).attr({
+//
+//   // src: someRemoteImage
+//
+// }).error(function(){
+//   //do something if image cannot load
+// });
+
+
 var mainState = {
   preload: function(){
-    game.load.image('player', 'player2.png');
-    game.load.image('wallV', 'wallVertical.png');
-    game.load.image('wallH', 'wallHorizontal.png');
-    game.load.image('coin', 'coin.png');
+    game.load.image('player', $('#player2')[0]);
+    game.load.image('wallV', '../../../public/wallVertical.png');
+    game.load.image('wallH', '../../../public/wallHorizontal.png');
+    game.load.image('coin', '../../../public/coin.png');
   },
 
   create: function(){

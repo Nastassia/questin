@@ -40,3 +40,5 @@ gem 'spring',        group: :development
 gem 'pry-rails'
 gem 'bcrypt'
 gem 'rails_12factor', group: :production
+gem 'rmagick'
+gem 'carrierwave'

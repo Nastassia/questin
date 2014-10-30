@@ -4,7 +4,9 @@
   </head>
   <body>
     <div id="wrapper">
-      <h1>Go Questin</h1>
+      <div id="banner">
+      <a href="/"><img src="/questin.png" /></a><br />
+      </div>
       <a href="/logout"><button>Log out</button></a>
       <hr />
       <aside>
@@ -12,6 +14,7 @@
       </aside>
       <main>
         <span style="display:none"><div id="userID"><%= user.id %></div></span>
+        <span style="display:none"><div id="container"></div></span>
         <h3>Hello <%= user.username %>!</h3>
         <% if user.characters == [] %>
           <div id="createCharacter">
