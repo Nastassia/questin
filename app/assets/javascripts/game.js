@@ -16,7 +16,7 @@
 
 var mainState = {
   preload: function(){
-    game.load.image('player', $('#player2')[0]);
+    game.load.image('player', 'player.png');
     game.load.image('wallV', '../../../public/wallVertical.png');
     game.load.image('wallH', '../../../public/wallHorizontal.png');
     game.load.image('coin', '../../../public/coin.png');
